@@ -6,8 +6,6 @@ kernel = (1/9) * np.array([
     [1, 1, 1]
 ])
 
-
-
 def blur(img_arr, padded_img):
     blurred_arr = np.array(np.zeros(img_arr.shape))
     for row in range(img_arr.shape[0]):

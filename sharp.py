@@ -6,8 +6,6 @@ kernel = np.array([
     [0, -1, 0]
 ])
 
-
-
 def sharp(img_arr, padded_img):
     sharped_arr = np.array(np.zeros(img_arr.shape))
     for row in range(img_arr.shape[0]):
