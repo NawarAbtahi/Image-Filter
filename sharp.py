@@ -14,5 +14,9 @@ def sharp(img_arr, padded_img):
         for column in range(img_arr.shape[1]):
             pixel_matrix = padded_img[row: row+3, column: column+3]
             convolve_img = np.sum(pixel_matrix * kernel)
+            if convolve_img >= 255:
+                convolve_img = 255
+            elif convolve_img <= 0:
+                convolve_img = 0
             sharpped_arr[row, column] = convolve_img
     return sharpped_arr
