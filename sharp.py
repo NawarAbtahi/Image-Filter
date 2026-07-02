@@ -9,7 +9,7 @@ kernel = np.array([
 
 
 def sharp(img_arr, padded_img):
-    sharpped_arr = np.array(np.zeros(img_arr.shape))
+    sharped_arr = np.array(np.zeros(img_arr.shape))
     for row in range(img_arr.shape[0]):
         for column in range(img_arr.shape[1]):
             pixel_matrix = padded_img[row: row+3, column: column+3]
@@ -18,5 +18,5 @@ def sharp(img_arr, padded_img):
                 convolve_img = 255
             elif convolve_img <= 0:
                 convolve_img = 0
-            sharpped_arr[row, column] = convolve_img
-    return sharpped_arr
+            sharped_arr[row, column] = convolve_img
+    return sharped_arr
