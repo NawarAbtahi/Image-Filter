@@ -35,3 +35,4 @@ match img_filter_options:
         edge_detect_img = Image.fromarray(edge_detect(img_arr, padded_image).astype(np.uint8))
         edge_detect_img.save(f"{file_name}-edge-detect{file_extension}")
         print("Image's edges has been detected!")
+
