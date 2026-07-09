@@ -14,9 +14,9 @@ file_extension = path_input[last_dot:]
 
 img_arr = np.array(img) #grayscale for 2d array
 
-h = 0;
-w = 0;
-c = 0;
+h = 0
+w = 0
+c = 0
 
 if(img_mode == "RGB" or img_mode == "RGBA"):
     h, w, c = img_arr.shape

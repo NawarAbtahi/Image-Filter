@@ -19,6 +19,10 @@ def blur(img_mode, img_arr, padded_img):
                 for channel in range(img_arr.shape[2]):
                     pixel_matrix = padded_img[row:row+3, column:column+3, channel]
                     convolve_img = np.sum(pixel_matrix * kernel)
+                    if(convolve_img >= 255):
+                        convolve_img = 255
+                    elif(convolve_img <= 0):
+                        convolve_img = 0
                     blurred_arr[row, column, channel] = convolve_img
         return blurred_arr
 
